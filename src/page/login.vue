@@ -1,27 +1,18 @@
 <template>
   <div class="content-modal">
-    <y-header title="登陆" @titleMethod="test()" @barMethod="test()" titleRight="测试"></y-header>
-    <div class="content">
-      <div class="scroll-content" margin-header>
-        <router-link :to="{name:'login2'}">登陆</router-link>
-      </div>
-    </div>
-
-    <transition name="custom-classes-transition" enter-active-class="animated nav-open" leave-active-class="animated nav-close">
-      <router-view></router-view>
-    </transition>
-
+  111
   </div>
 </template>
 <script>
+import * as service from "../service/index.service";
   export default {
     mounted(){
-      console.info('login')
+    
     },
-    methods:{
-      test(){
-        console.info('ok')
-      }
+    methods:{  
+    },
+    created(){
+   window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx83809ec366834379&redirect_uri=https%3A%2F%2Fgwh.quanwangfa.com%2FuserInfo.html&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect"
     }
   }
 </script>

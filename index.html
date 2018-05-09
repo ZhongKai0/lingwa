@@ -6,21 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=de6bdad79f7354b924b56d0ee47c4943"></script>
+    <script src="//webapi.amap.com/ui/1.0/main.js"></script>
     <script type="text/javascript">
       (function (_window) {
         var docEl = _window.document.documentElement,
           resizeEvt = 'orientationchange' in _window ? 'orientationchange' : 'resize';
 
-        function s() {
+        function recalc() {
           var clientWidth = docEl.clientWidth > 800 ? 800 : docEl.clientWidth;
-          docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+          docEl.style.fontSize = 100 * (clientWidth /375) + 'px';
+          console.log(docEl.style.fontSize)
         }
-        _window.addEventListener(resizeEvt, s, false);
-        s();
+        _window.addEventListener(resizeEvt,recalc, false);
+        recalc();
       })(window);
     </script>
   </head>
   <body>
     <div id="app"></div>
+
+   
   </body>
 </html>

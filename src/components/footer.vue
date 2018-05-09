@@ -1,22 +1,20 @@
 <template>
   <div class="tabbar">
     <router-link to="/index" class="tab-button" :class="{active:getPath == '/index' || getPath == '/'}" replace>
-        <span class="tab-button-icon home-icon">
-
-        </span>
-        <span class="tab-button-text">彩票大厅</span>
+        <img src="../assets/img/wxb明星店铺.png" alt="" style="width:20px">
+        <span class="tab-button-text">首页</span>
     </router-link>
     <router-link to="/info" class="tab-button" :class="{active:getPath == '/info'}" replace>
-        <span class="tab-button-icon notice-icon">
-
-        </span>
-        <span class="tab-button-text">开奖公告</span>
+         <img src="../assets/img/compass.png" alt="" style="width:20px">
+        <span class="tab-button-text">发现</span>
+    </router-link>
+      <router-link to="/history" class="tab-button" :class="{active:getPath == '/history'}" replace>
+        <img src="../assets/img/history.png" alt="" style="width:20px">
+        <span class="tab-button-text">历史</span>
     </router-link>
     <router-link to="/user" class="tab-button" :class="{active:getPath == '/user'}" replace>
-        <span class="tab-button-icon lottery-icon">
-
-        </span>
-        <span class="tab-button-text">我的彩票</span>
+        <img src="../assets/img/account.png" alt="" style="width:20px">
+        <span class="tab-button-text">个人中心</span>
     </router-link>
   </div>
 </template>
@@ -118,7 +116,6 @@
     line-height: 1;
     text-rendering: auto;
     text-transform: none;
-    speak: none;
   }
 
   .tab-button-text {
